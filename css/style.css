@@ -75,12 +75,15 @@ header .container ul li:last-child {
 header ul{
   cursor: pointer;
 }
+header nav{
+  background-color: var(--dark-mode-element-background);
+}
 header nav ul {
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
   padding: 12px;
-  background-color: var(--dark-mode-element-background);
+ 
 }
 header nav ul li a {
   text-decoration: none;
@@ -203,7 +206,42 @@ gap: .4rem;
     justify-content: center;
     align-items: center;
 }
-.aside{
+.aside {
+  display: flex;
+  justify-content: space-between;
+  height: 10rem;
+  padding: 10px;
+  /* border: 2px solid red; */
+
+}
+.aside-left{
+  display: flex;
+ width: 70%;
+  justify-content: space-evenly;
+  align-items: center;
+  /* border: 2px solid blue; */
+}
+.aside-left div{
+  /* border: 2px solid yellow; */
+  margin: 0;
+  line-height: 1.5;
+  /* padding: 100%; */
+}
+.aside-right{
+  display: flex;
+  flex-direction:column;
+  line-height: 1.5;
+  justify-content: space-evenly;
+  
+
+  /* border: 2px solid green; */
+  
+}
+.aside-left div ul{
+  list-style-type: none;
+}
+
+/* .aside{
     margin-top: 3rem;
     padding: 10px;
     display: flex;
@@ -226,7 +264,9 @@ gap: .4rem;
 }
 ul,li{
     list-style-type: none;
-}
+} */
+
+
 footer{
     padding: 10px;
     display: flex;
@@ -241,6 +281,15 @@ footer div{
 .small{
     text-align: center;
     font-size: .7rem;
+}
+/* 
+
+responsive */
+.responsive{
+  display: none;
+  /* border: 2px solid var(--dark-mode-black); */
+  padding: 10px;
+  font-size: 1.2rem;
 }
 @media only screen and (max-width: 1200px) {
   header .container ul li{
@@ -323,3 +372,33 @@ footer div{
     left: 80% ;
   }
 }
+@media only screen and (max-width: 474px){
+  .responsive{
+   /* display: flex;  */
+   text-align: center;
+   /* justify-content: flex-end; */
+   margin: 10px;
+  }
+  .responsive-nav{
+    display: none;  
+    /* display: flex; */
+    flex-direction: column;
+    text-align: center;
+  }
+} 
+@media only screen and (max-width: 434px){
+  .aside{
+    flex-direction: column;
+    justify-content: left;
+    height: auto;
+    gap: 1rem;
+  }
+  footer div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.3;
+  }
+ 
+} 
