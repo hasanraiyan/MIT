@@ -72,7 +72,9 @@ header .container ul li:last-child {
 }
 
 /*  */
-
+header ul{
+  cursor: pointer;
+}
 header nav ul {
   display: flex;
   justify-content: space-evenly;
@@ -239,4 +241,85 @@ footer div{
 .small{
     text-align: center;
     font-size: .7rem;
+}
+@media only screen and (max-width: 1200px) {
+  header .container ul li{
+    border: none;
+  }
+}
+@media only screen and (max-width: 1070px){
+  header .container .logo{
+    flex-direction: column;
+    width: auto;
+    justify-content: left;
+    /* height: 700px; */
+    text-align: left;
+    font-size: 80%;
+  }
+  header .container{
+    height: 163px;
+  }
+  header ul{
+    /* flex-direction: column; */
+    width: auto;
+    font-size: 80%;
+  }
+  .information .left figure{
+    flex-shrink: 1;
+  }
+  .information .right{
+    flex-shrink: 2;
+  }
+  
+}
+@media only screen and (max-width: 927px){
+  .container{
+    margin: 0;
+  }
+  .right{
+    font-size: .8rem;
+  }
+  header .container ul{
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    flex-flow: row wrap;  
+    /* position: absolute; */
+
+  }
+  .information{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 840px) {
+  header .container ul{
+    display: none;
+  }
+  header .container .logo{
+    flex-direction: row;
+  }
+  nav ul{
+    display: flex;
+    flex-flow: row wrap ;
+    max-height: auto;
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 710px) {
+  *{
+    font-size: .9rem;
+  }
+  .enquiry{
+    padding: 17px;
+  }
+  .aside div{
+    margin: auto;
+    /* text-align: center; */
+  padding: 0;
+  }
+  .read-more{
+    left: 80% ;
+  }
 }
