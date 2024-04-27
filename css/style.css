@@ -202,9 +202,19 @@ gap: .4rem;
 }
 
 .img{
-    text-align: center;
+    /* text-align: center;
     justify-content: center;
+    align-items: center; */
+    /* display: flex; */
+    /* justify-content: flex-start; */
     align-items: center;
+    vertical-align: middle;
+    max-width: 1em;
+
+}
+.img img{
+  max-height: 34px;
+
 }
 .aside {
   display: flex;
