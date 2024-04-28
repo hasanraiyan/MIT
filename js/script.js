@@ -1,12 +1,18 @@
-var responsive = document.getElementsByClassName('responsive');
-var responsiveNav = document.getElementsByClassName('responsive-nav'); // Access the first element with class 'responsive-nav'
+// Access the first element with class 'responsive' and 'responsive-nav'
+const responsive = document.querySelector('.responsive');
+const responsiveNav = document.querySelector('.responsive-nav');
 
 function changeNav() {
-    var responsiveNav = document.querySelector('.responsive-nav');
     if (responsiveNav) {
-        var currentDisplay = window.getComputedStyle(responsiveNav).display;
-        responsiveNav.style.display = (currentDisplay === 'none' || !currentDisplay) ? 'flex' : 'none';
+        // Use toggle to switch between flex and none display
+        responsiveNav.style.display = responsiveNav.style.display === 'none' ? 'flex' : 'none';
     } else {
         console.error("Element with class 'responsive-nav' not found.");
     }
 }
+
+// Call the function on page load
+changeNav();
+
+// Add event listener to toggle display on window resize
+window.addEventListener('resize', changeNav);
