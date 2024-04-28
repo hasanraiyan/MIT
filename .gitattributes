@@ -1,2 +1,5 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Auto-detect text files and perform LF normalization
+* ^(?i)(?!(\.|\/)(bin|obj|out|tmp|log|build)\/?$).+$(?i)\.(txt|log|ini|cfg|properties|java|cpp|cs|h|hpp|c|cc|hxx|hppx|rb|py|pl|ps1|bat|cmd|sh|sql|xml|json|yml|properties|groovy|scss|css|js|html|htm|php|asa|asax|ascx|ashx|asmx|asp|bas|cmd|config|context|css|def|disco|discomap|ear|eml|etl|fa|asax|ascx|ashx|asmx|asp|bas|vb|vbs|vbhtml|webinfo|licx|log|master|members|mvc|one|page|pages|part|po|pot|proj|props|rake|rbw|resx|resources|routes|scpt|sitemap|skin|sql|themes|tool|ts|vbproj|vspscc|webinfo|xap|xoml|xsd|xsl|xslt|xml|xsd|xsl)$
+  :@text
+  # Normalize line endings to LF
+  ${echo/#/\n/g}
